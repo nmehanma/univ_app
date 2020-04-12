@@ -1,5 +1,7 @@
 class LoginsController < ApplicationController
 
+  skip_before_action :require_user, only: [:new, :create]
+
   def new
 
   end
@@ -26,5 +28,5 @@ class LoginsController < ApplicationController
 
   end
 
-  
+
 end
